@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글귀 작성</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #1b1b2f; /* 새벽 감성의 어두운 배경 */
+            color: #e0e4e5; /* 은은한 글자 색 */
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        button {
+            font-size: 1.1em;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            color: #1b1b2f;
+            background-color: #e0e4e5;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: #a3b9c9;
+            color: #1b1b2f;
+        }
+    </style>
+</head>
+<body>
+<h1>글귀 작성</h1>
+<button onclick="location.href='/write'">글쓰기</button>
+<button onclick="location.href='/view'">글 보러가기</button>
+</body>
+</html>

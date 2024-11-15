@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Notepad</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>🌿 My Little Quote Notepad 🌿</h1>
+
+<!-- Form to add new quotes -->
+<div id="quoteForm">
+    <input type="text" id="title" placeholder="Title (e.g., Inspiring Thoughts)" required>
+    <textarea id="quoteText" placeholder="Write your quote here..." rows="4" required></textarea>
+    <input type="text" id="author" placeholder="Author" required>
+    <button id="addQuoteBtn">Add to Notepad</button>
+</div>
+
+<!-- Container for displaying quote cards -->
+<div id="quoteContainer"></div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

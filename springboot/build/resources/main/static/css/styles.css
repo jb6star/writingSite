@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f0e1;
+    color: #4a4a4a;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #6a4c93;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#quoteForm {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Georgia', serif;
+    background-color: #fafafa;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a9a9a9;
+}
+
+#addQuoteBtn {
+    background-color: #6a4c93;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+#addQuoteBtn:hover {
+    background-color: #593572;
+}
+
+#quoteContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+    max-width: 800px;
+}
+
+.quoteCard {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    word-wrap: break-word;
+    font-family: 'Georgia', serif;
+}
+
+.quoteTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #6a4c93;
+}
+
+.quoteText {
+    font-size: 1rem;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.quoteAuthor {
+    font-size: 0.9rem;
+    color: #6a4c93;
+    text-align: right;
+    font-style: italic;
+}
