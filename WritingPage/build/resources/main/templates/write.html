@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Quote Notepad</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Body 전체 배경과 기본 텍스트 설정 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1a2a40, #243b55); /* 더 어두운 새벽 느낌 */
+            color: #000000; /* 기본 텍스트 색상을 검은색으로 설정 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 헤더 스타일 */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #4a4a4a; /* 차분한 검은색 톤 */
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+
+        /* 폼 컨테이너 */
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* 밝은 배경 박스 */
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        /* 입력 필드 공통 스타일 */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #000000; /* 텍스트 색상을 검은색으로 설정 */
+            background: rgba(255, 255, 255, 0.8); /* 밝은 배경 */
+            border: 1px solid #a3c4dc; /* 부드러운 파란색 테두리 */
+            outline: none;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* 입력 필드 포커스 스타일 */
+        input:focus, textarea:focus {
+            border: 1px solid #243b55; /* 포커스 시 더 짙은 파란색 */
+        }
+
+        /* 버튼 스타일 */
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            color: #ffffff;
+            background: #8797af; /* 부드러운 파란색 */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #243b55; /* 버튼 호버 시 짙은 파란색 */
+        }
+
+        /* 카드 컨테이너 */
+        #quoteContainer {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        /* 카드 스타일 */
+        .quoteCard {
+            background: rgba(255, 255, 255, 0.9); /* 밝은 카드 배경 */
+            color: #000000; /* 카드 텍스트는 검은색 */
+            border-left: 4px solid #8797af;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .quoteTitle {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .quoteText {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .quoteAuthor {
+            text-align: right;
+            color: #4a4a4a; /* 은은한 검정 */
+        }
+    </style>
+</head>
+<body>
+<h1>🌙 My Little Quote Notepad</h1>
+
+<form id="quoteForm" method="post" action="/write">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" placeholder="Title (e.g., Inspiring Thoughts)" required>
+
+    <label for="quoteText">Quote:</label>
+    <textarea id="quoteText" name="text" placeholder="Write your quote here..." rows="4" required></textarea>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" placeholder="Author" required>
+
+    <button type="submit">Add to Notepad</button>
+</form>
+
+<div id="quoteContainer"></div>
+</body>
+</html>
